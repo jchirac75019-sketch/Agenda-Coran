@@ -491,8 +491,15 @@ input:focus, select:focus, textarea:focus { outline: var(--focus-outline); borde
 // ANTI-REFRESH & ANTI-SLEEP SYSTEM
 // ====================================
 
-document.addEventListener('touchmove', function(e) {
+// Protection anti "pull-to-refresh" intelligente
+let preventPullToRefresh = false;
+document.addEventListener('touchstart', function(e) {
     if (window.scrollY === 0) {
+        preventPullToRefresh = e.touches.length === 1;
+    }
+});
+document.addEventListener('touchmove', function(e) {
+    if (preventPullToRefresh && window.scrollY === 0 && e.touches[0].clientY > 0) {
         e.preventDefault();
     }
 }, { passive: false });
