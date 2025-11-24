@@ -79,7 +79,6 @@ self.addEventListener('fetch', event => {
           if (!response || response.status !== 200) {
             return response;
           }
-          
           // Vérifier que c'est une requête GET avant de mettre en cache
           if (request.method === 'GET') {
             const responseClone = response.clone();
@@ -87,7 +86,6 @@ self.addEventListener('fetch', event => {
               cache.put(request, responseClone);
             });
           }
-          
           return response;
         })
         .catch(() => {
