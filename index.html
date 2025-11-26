@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda Coran - برنامج القرآن الكريم">
+    <meta name="theme-color" content="#208085">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Agenda Coran">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-128.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <title>برنامج القرآن الكريم</title>
+    <style>
+        :root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+  --color-purple-500: rgba(168, 85, 247, 1);
+  --color-purple-600: rgba(147, 51, 234, 1);
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-family-base); background-color: var(--color-background); color: var(--color-text); line-height: var(--line-height-normal); padding: var(--space-16); }
+.container { max-width: var(--container-md); margin: 0 auto; }
+.card { background-color: var(--color-surface); border-radius: var(--radius-lg); border: 1px solid var(--color-card-border); padding: var(--space-24); margin-bottom: var(--space-16); box-shadow: var(--shadow-sm); }
+.header { text-align: center; margin-bottom: var(--space-32); }
+.header h1 { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); color: var(--color-primary); margin-bottom: var(--space-8); }
+.btn { display: inline-block; padding: var(--space-12) var(--space-24); border: none; border-radius: var(--radius-base); font-size: var(--font-size-base); font-weight: var(--font-weight-medium); cursor: pointer; transition: all var(--duration-normal) var(--ease-standard); text-align: center; width: 100%; margin-bottom: var(--space-12); }
+.btn-primary { background-color: var(--color-primary); color: var(--color-btn-primary-text); }
+.btn-primary:hover { background-color: var(--color-primary-hover); }
+.btn-secondary { background-color: var(--color-secondary); color: var(--color-text); }
+.btn-secondary:hover { background-color: var(--color-secondary-hover); }
+.btn-danger { background-color: var(--color-error); color: var(--color-white); }
+.btn-danger:hover { opacity: 0.9; }
+
+/* ===== MODIFICATIONS DEMANDÉES ===== */
+.btn-create-program { 
+    font-size: 18px; 
+    padding: 16px 24px;
+    font-weight: 600;
+}
+
+.btn-sync { 
+    background-color: var(--color-purple-500); 
+    color: var(--color-btn-primary-text); 
+}
+.btn-sync:hover { 
+    background-color: var(--color-purple-600); 
+}
+/* ===== FIN MODIFICATIONS ===== */
+
+.form-group { margin-bottom: var(--space-20); }
+label { display: block; margin-bottom: var(--space-8); font-weight: var(--font-weight-medium); font-size: var(--font-size-base); }
+input, select, textarea { width: 100%; padding: var(--space-12); border: 1px solid var(--color-border); border-radius: var(--radius-base); font-size: var(--font-size-base); background-color: var(--color-surface); color: var(--color-text); font-family: var(--font-family-base); }
+select { appearance: none; background-image: var(--select-caret-light); background-repeat: no-repeat; background-position: left var(--space-12) center; background-size: 16px; padding-left: var(--space-32); }
+@media (prefers-color-scheme: dark) { select { background-image: var(--select-caret-dark); } }
+input:focus, select:focus, textarea:focus { outline: var(--focus-outline); border-color: var(--color-primary); }
+.task-card { background-color: var(--color-bg-1); border: 1px solid var(--color-card-border); border-radius: var(--radius-lg); padding: var(--space-20); margin-bottom: var(--space-16); }
+.task-card.completed { background-color: var(--color-bg-3); opacity: 0.8; }
+.task-card.delayed { background-color: var(--color-bg-4); }
+.task-card.future { background-color: var(--color-bg-2); opacity: 0.7; }
+.task-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-12); }
+.task-info { font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); }
+.task-range { font-size: var(--font-size-base); color: var(--color-text-secondary); margin-top: var(--space-8); }
+.status-badge { display: inline-block; padding: var(--space-6) var(--space-12); border-radius: var(--radius-full); font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); }
+.status-success { background-color: rgba(var(--color-success-rgb), var(--status-bg-opacity)); color: var(--color-success); border: 1px solid rgba(var(--color-success-rgb), var(--status-border-opacity)); }
+.status-warning { background-color: rgba(var(--color-warning-rgb), var(--status-bg-opacity)); color: var(--color-warning); border: 1px solid rgba(var(--color-warning-rgb), var(--status-border-opacity)); }
+.status-error { background-color: rgba(var(--color-error-rgb), var(--status-bg-opacity)); color: var(--color-error); border: 1px solid rgba(var(--color-error-rgb), var(--status-border-opacity)); }
+.status-info { background-color: rgba(var(--color-info-rgb), var(--status-bg-opacity)); color: var(--color-info); border: 1px solid rgba(var(--color-info-rgb), var(--status-border-opacity)); }
+.hidden { display: none; }
+.checkbox-group { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--space-12); }
+.checkbox-label { display: flex; align-items: center; gap: var(--space-8); cursor: pointer; }
+.checkbox-label input { width: auto; cursor: pointer; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-16); margin-bottom: var(--space-24); }
+.stat-item { background-color: var(--color-bg-5); padding: var(--space-16); border-radius: var(--radius-base); text-align: center; border: 1px solid var(--color-card-border); }
+.stat-value { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-primary); display: block; }
+.stat-label { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-top: var(--space-4); }
+.tabs { display: flex; gap: var(--space-8); margin-bottom: var(--space-20); border-bottom: 2px solid var(--color-border); }
+.tab { padding: var(--space-12) var(--space-20); background: none; border: none; border-bottom: 3px solid transparent; cursor: pointer; font-size: var(--font-size-base); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); transition: all var(--duration-fast) var(--ease-standard); }
+.tab.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+.tab:hover { color: var(--color-primary-hover); }
+.progress-bar { width: 100%; height: 24px; background-color: var(--color-secondary); border-radius: var(--radius-full); overflow: hidden; margin: var(--space-16) 0; }
+.progress-fill { height: 100%; background-color: var(--color-primary); transition: width var(--duration-normal) var(--ease-standard); display: flex; align-items: center; justify-content: center; color: var(--color-btn-primary-text); font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); }
+.btn-group { display: flex; gap: var(--space-12); margin-top: var(--space-16); }
+.btn-group .btn { margin-bottom: 0; }
+.alert { padding: var(--space-16); border-radius: var(--radius-base); margin-bottom: var(--space-16); border: 1px solid; }
+.alert-info { background-color: var(--color-bg-1); border-color: var(--color-primary); color: var(--color-text); }
+.alert-warning { background-color: var(--color-bg-4); border-color: var(--color-error); color: var(--color-text); }
+.partial-progress { background-color: var(--color-bg-6); padding: var(--space-16); border-radius: var(--radius-base); margin-top: var(--space-16); border: 1px solid var(--color-card-border); }
+.verse-input-group { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-12); }
+.small-text { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
+.task-number { background-color: var(--color-primary); color: var(--color-btn-primary-text); width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: var(--font-weight-bold); font-size: var(--font-size-sm); margin-left: var(--space-8); }
+.task-actions { display: flex; gap: var(--space-8); margin-top: var(--space-12); }
+.btn-small { padding: var(--space-6) var(--space-12); font-size: var(--font-size-sm); }
+.program-list-item { background-color: var(--color-bg-2); border: 1px solid var(--color-card-border); border-radius: var(--radius-base); padding: var(--space-16); margin-bottom: var(--space-12); cursor: pointer; transition: all var(--duration-fast) var(--ease-standard); }
+.program-list-item:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.program-title { font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); margin-bottom: var(--space-8); }
+.program-meta { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
+.sync-indicator { position: fixed; bottom: 20px; left: 20px; background: var(--color-success); color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; opacity: 0; transition: opacity 0.3s; z-index: 1000; }
+.sync-indicator.show { opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 برنامج القرآن الكريم</h1>
+        </div>
+
+        <div id="syncStatus" class="sync-indicator">☁️ محفوظ</div>
+
+        <!-- Login/Register View -->
+        <div id="authView" class="card">
+            <h2 style="margin-bottom: var(--space-20);">🔐 تسجيل الدخول / إنشاء حساب</h2>
+            
+            <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" id="authEmail" placeholder="example@email.com">
+            </div>
+            
+            <div class="form-group">
+                <label>كلمة المرور</label>
+                <input type="password" id="authPassword" placeholder="••••••••">
+            </div>
+            
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="rememberMe" checked>
+                    تذكر بياناتي
+                </label>
+            </div>
+            
+            <button class="btn btn-primary" onclick="loginUser()">🔓 تسجيل الدخول</button>
+            <button class="btn btn-secondary" onclick="registerUser()">✍️ إنشاء حساب جديد</button>
+            <button class="btn btn-secondary" onclick="skipAuth()">⏭️ متابعة بدون حساب</button>
+        </div>
+
+        <div id="menuView" class="card">
+            <div id="userInfo" style="margin-bottom: var(--space-16); padding: var(--space-12); background: var(--color-bg-5); border-radius: var(--radius-base);"></div>
+            
+            <button class="btn btn-primary btn-create-program" onclick="showCreateProgramView()">➕ إنشاء برنامج جديد</button>
+            <button class="btn btn-secondary" onclick="showProgramsList()">📋 برامجي</button>
+            
+            <div style="margin-top: var(--space-20); padding-top: var(--space-20); border-top: 1px solid var(--color-border);">
+                <h3 style="margin-bottom: var(--space-12); font-size: var(--font-size-lg);">📥 إدارة البيانات</h3>
+                <button class="btn btn-sync" onclick="manualSync()" id="syncButton">🔄 مزامنة يدوية</button>
+                <button class="btn btn-secondary" onclick="exportData()">💾 تصدير البيانات (JSON)</button>
+                <button class="btn btn-secondary" onclick="importData()">📤 استيراد البيانات (JSON)</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleFileImport(event)">
+            </div>
+        </div>
+
+        <div id="programsListView" class="hidden">
+            <button class="btn btn-secondary" onclick="showMenuView()">🔙 العودة للقائمة</button>
+            <div class="card">
+                <h2 style="margin-bottom: var(--space-20);">📋 برامجي</h2>
+                <div id="programsList"></div>
+            </div>
+        </div>
+
+        <div id="createProgramView" class="card hidden">
+            <h2 style="margin-bottom: var(--space-20);">إنشاء برنامج جديد</h2>
+
+            <div class="form-group">
+                <label>اسم البرنامج</label>
+                <input type="text" id="programName" placeholder="مثال: حفظ جزء عم">
+            </div>
+
+            <div class="form-group">
+                <label>نوع البرنامج</label>
+                <select id="programType">
+                    <option value="lecture">📖 قراءة</option>
+                    <option value="memorisation">🧠 حفظ</option>
+                    <option value="revision">🔄 مراجعة</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>من (سورة:آية)</label>
+                <div class="verse-input-group">
+                    <select id="startSurah"></select>
+                    <input type="number" id="startVerse" min="1" placeholder="الآية">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>إلى (سورة:آية)</label>
+                <div class="verse-input-group">
+                    <select id="endSurah"></select>
+                    <input type="number" id="endVerse" min="1" placeholder="الآية">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>📆 عدد الأيام لإنهاء البرنامج</label>
+                <input type="number" id="numberOfDays" min="1" value="30" placeholder="مثال: 30 يوم">
+                <small class="small-text" style="display: block; margin-top: var(--space-4);">سيتم حساب عدد الآيات اليومية تلقائياً</small>
+            </div>
+
+            <div class="form-group">
+                <label>عدد الآيات المحسوب يومياً</label>
+                <input type="text" id="calculatedVersesPerDay" readonly style="background-color: var(--color-secondary);" value="سيتم الحساب تلقائياً">
+            </div>
+
+            <div class="form-group">
+                <label>تاريخ البدء</label>
+                <input type="date" id="startDate">
+            </div>
+
+            <div class="form-group">
+                <label>أيام الاستثناء (لن تحسب في البرنامج)</label>
+                <div class="checkbox-group" id="excludedDaysGroup"></div>
+            </div>
+
+            <div class="form-group">
+                <label>وقت التذكير</label>
+                <input type="time" id="reminderTime" value="09:00">
+            </div>
+
+            <button class="btn btn-primary" onclick="createProgram()">✅ إنشاء البرنامج</button>
+            <button class="btn btn-secondary" onclick="showMenuView()">❌ إلغاء</button>
+        </div>
+
+        <div id="mainView" class="hidden">
+            <button class="btn btn-secondary" onclick="showMenuView()">🔙 العودة للقائمة</button>
+
+            <div class="card">
+                <h2 id="programTitle" style="margin-bottom: var(--space-16);"></h2>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-value" id="totalVersesDisplay">0</span>
+                        <span class="stat-label">إجمالي الآيات</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="completedVersesDisplay">0</span>
+                        <span class="stat-label">الآيات المنجزة</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="remainingVersesDisplay">0</span>
+                        <span class="stat-label">الآيات المتبقية</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="streakDisplay">0</span>
+                        <span class="stat-label">سلسلة الأيام</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill">0%</div>
+                </div>
+
+                <div id="todayTaskCard"></div>
+                <div id="delayAlert"></div>
+                <div id="partialProgressAlert"></div>
+
+                <div class="btn-group">
+                    <button class="btn btn-danger" onclick="deleteCurrentProgram()">🗑️ حذف البرنامج</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: var(--space-16);">📊 سجل المهام</h3>
+
+                <div class="tabs">
+                    <button class="tab active" onclick="showAllScheduledTasks()">📅 جميع المهام المجدولة</button>
+                    <button class="tab" onclick="showCompletedHistory()">✅ المهام المنجزة</button>
+                    <button class="tab" onclick="showPendingHistory()">⏳ المهام المعلقة</button>
+                </div>
+
+                <div id="historyContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyApUV95mV7_YC29KKxdLcjlddf564PJeeg",
+            authDomain: "quran-s-agenda.firebaseapp.com",
+            projectId: "quran-s-agenda",
+            storageBucket: "quran-s-agenda.firebasestorage.app",
+            messagingSenderId: "771795458928",
+            appId: "1:771795458928:web:3dbf37f776d7ca2e544db5",
+            measurementId: "G-33HN1TPBFX"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+
+        window.firebaseDB = db;
+        window.firebaseAuth = auth;
+        window.firestoreDoc = doc;
+        window.firestoreSetDoc = setDoc;
+        window.firestoreGetDoc = getDoc;
+        window.firebaseCreateUser = createUserWithEmailAndPassword;
+        window.firebaseSignIn = signInWithEmailAndPassword;
+        window.firebaseOnAuthStateChanged = onAuthStateChanged;
+        window.firebaseSignOut = signOut;
+
+        console.log('✅ Firebase initialisé avec succès');
+        
+        // ===== SETUP AUTH STATE LISTENER BEFORE INIT =====
+        let authInitialized = false;
+        window.firebaseOnAuthStateChanged(window.firebaseAuth, async (user) => {
+            if (user) {
+                currentUser = user;
+                isCloudSyncEnabled = true;
+                console.log('✅ User already logged in:', user.email);
+                
+                const cloudLoaded = await loadFromCloud();
+                if (!cloudLoaded) {
+                    loadFromStorage();
+                }
+                
+                updateUserInfo();
+                localStorage.setItem('quranAppVisited', 'true');
+            } else {
+                currentUser = null;
+                isCloudSyncEnabled = false;
+                loadFromStorage();
+                updateUserInfo();
+            }
+            authInitialized = true;
+            showCorrectView();
+        });
+
+        // ===== REGISTER SERVICE WORKER =====
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('✅ Service Worker enregistré:', registration);
+                    })
+                    .catch(error => {
+                        console.error('❌ Erreur Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+
+    <script>
+// ====================================
+// ANTI-REFRESH & ANTI-SLEEP SYSTEM
+// ====================================
+
+document.addEventListener('touchmove', function(e) {
+    if (window.scrollY === 0) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F5' || (e.ctrlKey && e.key === 'r')) {
+        if (!confirm('⚠️ هل تريد فعلاً تحديث الصفحة؟ قد تفقد البيانات غير المحفوظة!')) {
+            e.preventDefault();
+            return false;
+        }
+    }
+});
+
+let wakeLock = null;
+
+async function enableWakeLock() {
+    try {
+        if ('wakeLock' in navigator) {
+            wakeLock = await navigator.wakeLock.request('screen');
+            console.log('✅ Wake Lock activé - l\'écran restera allumé');
+            
+            wakeLock.addEventListener('release', () => {
+                console.log('⚠️ Wake Lock relâché');
+            });
+        }
+    } catch (err) {
+        console.warn('❌ Wake Lock non supporté ou refusé:', err);
+    }
+}
+
+document.addEventListener('visibilitychange', async () => {
+    if (wakeLock !== null && document.visibilityState === 'visible') {
+        await enableWakeLock();
+    }
+});
+
+enableWakeLock();
+
+// ====================================
+// SURAH DATA
+// ====================================
+
+const SURAH_DATA = [
+    {num: 1, name: "الفاتحة", verses: 7}, {num: 2, name: "البقرة", verses: 286}, {num: 3, name: "آل عمران", verses: 200}, {num: 4, name: "النساء", verses: 176}, {num: 5, name: "المائدة", verses: 120}, {num: 6, name: "الأنعام", verses: 165}, {num: 7, name: "الأعراف", verses: 206}, {num: 8, name: "الأنفال", verses: 75}, {num: 9, name: "التوبة", verses: 129}, {num: 10, name: "يونس", verses: 109}, {num: 11, name: "هود", verses: 123}, {num: 12, name: "يوسف", verses: 111}, {num: 13, name: "الرعد", verses: 43}, {num: 14, name: "إبراهيم", verses: 52}, {num: 15, name: "الحجر", verses: 99}, {num: 16, name: "النحل", verses: 128}, {num: 17, name: "الإسراء", verses: 111}, {num: 18, name: "الكهف", verses: 110}, {num: 19, name: "مريم", verses: 98}, {num: 20, name: "طه", verses: 135}, {num: 21, name: "الأنبياء", verses: 112}, {num: 22, name: "الحج", verses: 78}, {num: 23, name: "المؤمنون", verses: 118}, {num: 24, name: "النور", verses: 64}, {num: 25, name: "الفرقان", verses: 77}, {num: 26, name: "الشعراء", verses: 227}, {num: 27, name: "النمل", verses: 93}, {num: 28, name: "القصص", verses: 88}, {num: 29, name: "العنكبوت", verses: 69}, {num: 30, name: "الروم", verses: 60}, {num: 31, name: "لقمان", verses: 34}, {num: 32, name: "السجدة", verses: 30}, {num: 33, name: "الأحزاب", verses: 73}, {num: 34, name: "سبأ", verses: 54}, {num: 35, name: "فاطر", verses: 45}, {num: 36, name: "يس", verses: 83}, {num: 37, name: "الصافات", verses: 182}, {num: 38, name: "ص", verses: 88}, {num: 39, name: "الزمر", verses: 75}, {num: 40, name: "غافر", verses: 85}, {num: 41, name: "فصلت", verses: 54}, {num: 42, name: "الشورى", verses: 53}, {num: 43, name: "الزخرف", verses: 89}, {num: 44, name: "الدخان", verses: 59}, {num: 45, name: "الجاثية", verses: 37}, {num: 46, name: "الأحقاف", verses: 35}, {num: 47, name: "محمد", verses: 38}, {num: 48, name: "الفتح", verses: 29}, {num: 49, name: "الحجرات", verses: 18}, {num: 50, name: "ق", verses: 45}, {num: 51, name: "الذاريات", verses: 60}, {num: 52, name: "الطور", verses: 49}, {num: 53, name: "النجم", verses: 62}, {num: 54, name: "القمر", verses: 55}, {num: 55, name: "الرحمن", verses: 78}, {num: 56, name: "الواقعة", verses: 96}, {num: 57, name: "الحديد", verses: 29}, {num: 58, name: "المجادلة", verses: 22}, {num: 59, name: "الحشر", verses: 24}, {num: 60, name: "الممتحنة", verses: 13}, {num: 61, name: "الصف", verses: 14}, {num: 62, name: "الجمعة", verses: 11}, {num: 63, name: "المنافقون", verses: 11}, {num: 64, name: "التغابن", verses: 18}, {num: 65, name: "الطلاق", verses: 12}, {num: 66, name: "التحريم", verses: 12}, {num: 67, name: "الملك", verses: 30}, {num: 68, name: "القلم", verses: 52}, {num: 69, name: "الحاقة", verses: 52}, {num: 70, name: "المعارج", verses: 44}, {num: 71, name: "نوح", verses: 28}, {num: 72, name: "الجن", verses: 28}, {num: 73, name: "المزمل", verses: 20}, {num: 74, name: "المدثر", verses: 56}, {num: 75, name: "القيامة", verses: 40}, {num: 76, name: "الإنسان", verses: 31}, {num: 77, name: "المرسلات", verses: 50}, {num: 78, name: "النبأ", verses: 40}, {num: 79, name: "النازعات", verses: 46}, {num: 80, name: "عبس", verses: 42}, {num: 81, name: "التكوير", verses: 29}, {num: 82, name: "الانفطار", verses: 19}, {num: 83, name: "المطففين", verses: 36}, {num: 84, name: "الانشقاق", verses: 25}, {num: 85, name: "البروج", verses: 22}, {num: 86, name: "الطارق", verses: 17}, {num: 87, name: "الأعلى", verses: 19}, {num: 88, name: "الغاشية", verses: 26}, {num: 89, name: "الفجر", verses: 30}, {num: 90, name: "البلد", verses: 20}, {num: 91, name: "الشمس", verses: 15}, {num: 92, name: "الليل", verses: 21}, {num: 93, name: "الضحى", verses: 11}, {num: 94, name: "الشرح", verses: 8}, {num: 95, name: "التين", verses: 8}, {num: 96, name: "العلق", verses: 19}, {num: 97, name: "القدر", verses: 5}, {num: 98, name: "البينة", verses: 8}, {num: 99, name: "الزلزلة", verses: 8}, {num: 100, name: "العاديات", verses: 11}, {num: 101, name: "القارعة", verses: 11}, {num: 102, name: "التكاثر", verses: 8}, {num: 103, name: "العصر", verses: 3}, {num: 104, name: "الهمزة", verses: 9}, {num: 105, name: "الفيل", verses: 5}, {num: 106, name: "قريش", verses: 4}, {num: 107, name: "الماعون", verses: 7}, {num: 108, name: "الكوثر", verses: 3}, {num: 109, name: "الكافرون", verses: 6}, {num: 110, name: "النصر", verses: 3}, {num: 111, name: "المسد", verses: 5}, {num: 112, name: "الإخلاص", verses: 4}, {num: 113, name: "الفلق", verses: 5}, {num: 114, name: "الناس", verses: 6}
+];
+
+const WEEKDAYS = ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
+const GREGORIAN_MONTHS_ARABIC = ["جانفي", "فيفري", "مارس", "أفريل", "ماي", "جوان", "جويلية", "أوت", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+const HIJRI_MONTHS = ["محرم", "صفر", "ربيع الأول", "ربيع الآخر", "جمادى الأولى", "جمادى الآخرة", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"];
+const PROGRAM_TYPES = {lecture: "📖 قراءة", memorisation: "🧠 حفظ", revision: "🔄 مراجعة"};
+
+let allPrograms = [];
+let currentProgramId = null;
+let isCloudSyncEnabled = false;
+let currentUser = null;
+
+// ====================================
+// SHOW CORRECT VIEW AFTER AUTH CHECK
+// ====================================
+
+function showCorrectView() {
+    const hasVisitedBefore = localStorage.getItem('quranAppVisited');
+    
+    if (currentUser) {
+        updateUserInfo();
+        showMenuView();
+    } else if (hasVisitedBefore) {
+        updateUserInfo();
+        showMenuView();
+    } else {
+        showAuthView();
+    }
+}
+
+// ====================================
+// SYSTÈME DE SAUVEGARDE (localStorage + Firebase)
+// ====================================
+
+function showSyncIndicator() {
+    const indicator = document.getElementById('syncStatus');
+    indicator.classList.add('show');
+    setTimeout(() => {
+        indicator.classList.remove('show');
+    }, 2000);
+}
+
+async function saveToCloud() {
+    if (!window.firebaseDB || !currentUser) return;
+    
+    try {
+        const userId = currentUser.uid;
+        const docRef = window.firestoreDoc(window.firebaseDB, 'quranPrograms', userId);
+        
+        await window.firestoreSetDoc(docRef, {
+            programs: allPrograms,
+            currentProgramId: currentProgramId,
+            lastUpdated: new Date().toISOString()
+        });
+        
+        console.log('☁️ Données sauvegardées dans le Cloud');
+        showSyncIndicator();
+    } catch (error) {
+        console.error('❌ Erreur sauvegarde Cloud:', error);
+    }
+}
+
+async function loadFromCloud() {
+    if (!window.firebaseDB || !currentUser) return false;
+    
+    try {
+        const userId = currentUser.uid;
+        const docRef = window.firestoreDoc(window.firebaseDB, 'quranPrograms', userId);
+        const docSnap = await window.firestoreGetDoc(docRef);
+        
+        if (docSnap.exists()) {
+            const data = docSnap.data();
+            allPrograms = data.programs || [];
+            currentProgramId = data.currentProgramId || null;
+            isCloudSyncEnabled = true;
+            console.log('☁️ Données chargées depuis le Cloud:', allPrograms.length, 'programmes');
+            return true;
+        }
+        return false;
+    } catch (error) {
+        console.error('❌ Erreur chargement Cloud:', error);
+        return false;
+    }
+}
+
+function loadFromStorage() {
+    try {
+        const storedPrograms = localStorage.getItem('quranPrograms');
+        if (storedPrograms) {
+            allPrograms = JSON.parse(storedPrograms);
+            console.log('💾 Programmes chargés depuis localStorage:', allPrograms.length);
+        }
+        
+        const storedCurrentId = localStorage.getItem('currentProgramId');
+        if (storedCurrentId) {
+            currentProgramId = storedCurrentId;
+            console.log('💾 Programme actif chargé:', currentProgramId);
+        }
+    } catch (error) {
+        console.error('❌ Erreur lors du chargement:', error);
+        allPrograms = [];
+        currentProgramId = null;
+    }
+}
+
+function saveToStorage() {
+    try {
+        localStorage.setItem('quranPrograms', JSON.stringify(allPrograms));
+        
+        if (currentProgramId) {
+            localStorage.setItem('currentProgramId', currentProgramId);
+        } else {
+            localStorage.removeItem('currentProgramId');
+        }
+        
+        console.log('💾 Données sauvegardées en local');
+        
+        if (currentUser && isCloudSyncEnabled) {
+            saveToCloud();
+        }
+    } catch (error) {
+        console.error('❌ Erreur lors de la sauvegarde:', error);
+        alert('⚠️ خطأ في حفظ البيانات. تأكد من وجود مساحة كافية في المتصفح.');
+    }
+}
+
+// ====================================
+// INIT
+// ====================================
+
+function init() {
+    populateSurahSelects();
+    populateExcludedDays();
+    setDefaultStartDate();
+    setupCalculatorListeners();
+    loadSavedCredentials();
+}
+
+function loadSavedCredentials() {
+    const savedCreds = getSavedCredentials();
+    if (savedCreds) {
+        document.getElementById('authEmail').value = savedCreds.email;
+        document.getElementById('authPassword').value = savedCreds.password;
+        document.getElementById('rememberMe').checked = true;
+    }
+}
+
+function getSavedCredentials() {
+    try {
+        const saved = localStorage.getItem('quranAgendaAuth');
+        return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+        return null;
+    }
+}
+
+function saveCredentials(email, password) {
+    const rememberMe = document.getElementById('rememberMe').checked;
+    if (rememberMe) {
+        localStorage.setItem('quranAgendaAuth', JSON.stringify({ email, password }));
+    } else {
+        localStorage.removeItem('quranAgendaAuth');
+    }
+}
+
+function clearSavedCredentials() {
+    localStorage.removeItem('quranAgendaAuth');
+}
+
+function showAuthView() {
+    hideAllViews();
+    document.getElementById('authView').classList.remove('hidden');
+}
+
+function updateUserInfo() {
+    const userInfoDiv = document.getElementById('userInfo');
+    if (currentUser) {
+        userInfoDiv.innerHTML = `
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <strong>👤 ${currentUser.email}</strong><br>
+                    <small style="color: var(--color-text-secondary);">☁️ متصل - مزامنة تلقائية</small>
+                </div>
+                <button class="btn btn-secondary btn-small" onclick="logoutUser()">🚪 تسجيل الخروج</button>
+            </div>
+        `;
+    } else {
+        userInfoDiv.innerHTML = `
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <strong>💾 وضع محلي</strong><br>
+                    <small style="color: var(--color-text-secondary);">البيانات محفوظة على هذا الجهاز فقط</small>
+                </div>
+                <button class="btn btn-secondary btn-small" onclick="showAuthView()">🔐 تسجيل الدخول</button>
+            </div>
+        `;
+    }
+}
+
+async function registerUser() {
+    const email = document.getElementById('authEmail').value.trim();
+    const password = document.getElementById('authPassword').value;
+    
+    if (!email || !password) {
+        alert('⚠️ الرجاء إدخال البريد الإلكتروني وكلمة المرور');
+        return;
+    }
+    
+    if (password.length < 6) {
+        alert('⚠️ كلمة المرور يجب أن تكون 6 أحرف على الأقل');
+        return;
+    }
+    
+    try {
+        const userCredential = await window.firebaseCreateUser(window.firebaseAuth, email, password);
+        currentUser = userCredential.user;
+        isCloudSyncEnabled = true;
+        
+        saveCredentials(email, password);
+        localStorage.setItem('quranAppVisited', 'true');
+        loadFromStorage();
+        await saveToCloud();
+        
+        updateUserInfo();
+        showMenuView();
+    } catch (error) {
+        console.error('Error:', error);
+        if (error.code === 'auth/email-already-in-use') {
+            alert('⚠️ هذا البريد الإلكتروني مستخدم بالفعل');
+        } else if (error.code === 'auth/invalid-email') {
+            alert('⚠️ البريد الإلكتروني غير صحيح');
+        } else if (error.code === 'auth/weak-password') {
+            alert('⚠️ كلمة المرور ضعيفة جداً');
+        } else {
+            alert('❌ خطأ في إنشاء الحساب: ' + error.message);
+        }
+    }
+}
+
+async function loginUser() {
+    const email = document.getElementById('authEmail').value.trim();
+    const password = document.getElementById('authPassword').value;
+    
+    if (!email || !password) {
+        const savedCreds = getSavedCredentials();
+        if (!savedCreds) {
+            showAuthView();
+            alert('⚠️ الرجاء إدخال البريد الإلكتروني وكلمة المرور');
+            return;
+        }
+    }
+    
+    try {
+        const userCredential = await window.firebaseSignIn(window.firebaseAuth, email, password);
+        currentUser = userCredential.user;
+        isCloudSyncEnabled = true;
+        
+        saveCredentials(email, password);
+        localStorage.setItem('quranAppVisited', 'true');
+        
+        const cloudLoaded = await loadFromCloud();
+        if (cloudLoaded) {
+            saveToStorage();
+        } else {
+            loadFromStorage();
+        }
+        
+        updateUserInfo();
+        showMenuView();
+    } catch (error) {
+        console.error('Error:', error);
+        showAuthView();
+        
+        if (error.code === 'auth/user-not-found') {
+            alert('⚠️ المستخدم غير موجود');
+        } else if (error.code === 'auth/wrong-password') {
+            alert('⚠️ كلمة المرور غير صحيحة');
+        } else if (error.code === 'auth/invalid-email') {
+            alert('⚠️ البريد الإلكتروني غير صحيح');
+        } else if (error.code === 'auth/invalid-credential') {
+            alert('⚠️ البريد الإلكتروني أو كلمة المرور غير صحيحة');
+        } else {
+            alert('❌ خطأ في تسجيل الدخول: ' + error.message);
+        }
+    }
+}
+
+async function logoutUser() {
+    if (confirm('⚠️ هل تريد تسجيل الخروج؟')) {
+        try {
+            await window.firebaseSignOut(window.firebaseAuth);
+            clearSavedCredentials();
+            currentUser = null;
+            isCloudSyncEnabled = false;
+            updateUserInfo();
+            alert('✅ تم تسجيل الخروج بنجاح');
+            showAuthView();
+        } catch (error) {
+            console.error('Error:', error);
+            alert('❌ خطأ في تسجيل الخروج');
+        }
+    }
+}
+
+async function manualSync() {
+    const button = document.getElementById('syncButton');
+    const originalText = button.textContent;
+    
+    if (!currentUser) {
+        alert('⚠️ يجب تسجيل الدخول أولاً للمزامنة');
+        return;
+    }
+    
+    button.textContent = '⏳ جاري المزامنة...';
+    button.disabled = true;
+    
+    try {
+        await saveToCloud();
+        
+        const cloudLoaded = await loadFromCloud();
+        if (cloudLoaded) {
+            saveToStorage();
+            updateMainView();
+        }
+        
+        showSyncIndicator();
+        alert('✅ تمت المزامنة بنجاح!');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('❌ خطأ في المزامنة: ' + error.message);
+    } finally {
+        button.textContent = originalText;
+        button.disabled = false;
+    }
+}
+
+function skipAuth() {
+    currentUser = null;
+    isCloudSyncEnabled = false;
+    localStorage.setItem('quranAppVisited', 'true');
+    loadFromStorage();
+    updateUserInfo();
+    showMenuView();
+}
+
+function exportData() {
+    const data = {
+        programs: allPrograms,
+        currentProgramId: currentProgramId,
+        exportDate: new Date().toISOString(),
+        version: '1.0'
+    };
+    
+    const jsonString = JSON.stringify(data, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'quran-agenda-backup-' + new Date().toISOString().split('T')[0] + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    alert('✅ تم تصدير البيانات بنجاح!');
+}
+
+function importData() {
+    document.getElementById('importFile').click();
+}
+
+function handleFileImport(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(e.target.result);
+            
+            if (!data.programs || !Array.isArray(data.programs)) {
+                alert('⚠️ ملف غير صحيح');
+                return;
+            }
+            
+            if (confirm('⚠️ هل تريد استبدال البيانات الحالية؟ سيتم حذف جميع البرامج الحالية.')) {
+                allPrograms = data.programs;
+                currentProgramId = data.currentProgramId || null;
+                
+                saveToStorage();
+                
+                if (currentUser) {
+                    saveToCloud();
+                }
+                
+                alert('✅ تم استيراد البيانات بنجاح!');
+                
+                if (currentProgramId && getCurrentProgram()) {
+                    showMainView();
+                } else {
+                    showMenuView();
+                }
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('❌ خطأ في قراءة الملف');
+        }
+    };
+    
+    reader.readAsText(file);
+    event.target.value = '';
+}
+
+// ====================================
+// FUNCTIONS FOR PROGRAM CREATION
+// ====================================
+
+function setupCalculatorListeners() {
+    const startSurah = document.getElementById('startSurah');
+    const startVerse = document.getElementById('startVerse');
+    const endSurah = document.getElementById('endSurah');
+    const endVerse = document.getElementById('endVerse');
+    const numberOfDays = document.getElementById('numberOfDays');
+    
+    const calculate = () => {
+        const ss = parseInt(startSurah.value);
+        const sv = parseInt(startVerse.value) || 1;
+        const es = parseInt(endSurah.value);
+        const ev = parseInt(endVerse.value) || SURAH_DATA[es - 1].verses;
+        const days = parseInt(numberOfDays.value) || 1;
+        
+        if (ss && sv && es && ev && days > 0) {
+            const total = calculateTotalVerses(ss, sv, es, ev);
+            if (total > 0) {
+                const versesPerDay = Math.ceil(total / days);
+                document.getElementById('calculatedVersesPerDay').value = versesPerDay + ' آية يومياً (إجمالي ' + total + ' آية)';
+            }
+        }
+    };
+    
+    startSurah.addEventListener('change', calculate);
+    startVerse.addEventListener('input', calculate);
+    endSurah.addEventListener('change', calculate);
+    endVerse.addEventListener('input', calculate);
+    numberOfDays.addEventListener('input', calculate);
+}
+
+function validateVerseInput(input, surahNum) {
+    const maxVerses = SURAH_DATA[surahNum - 1].verses;
+    const value = parseInt(input.value);
+    
+    input.style.border = '';
+    input.style.backgroundColor = '';
+    
+    if (value < 1 || value > maxVerses) {
+        input.style.border = '2px solid #ff0000';
+        input.style.backgroundColor = '#ffe6e6';
+        
+        setTimeout(() => {
+            alert('⚠️ رقم الآية يجب أن يكون بين 1 و ' + maxVerses + ' لسورة ' + SURAH_DATA[surahNum - 1].name);
+            input.value = maxVerses;
+            input.style.border = '';
+            input.style.backgroundColor = '';
+        }, 100);
+        
+        return false;
+    }
+    
+    return true;
+}
+
+function populateSurahSelects() {
+    const startSelect = document.getElementById('startSurah');
+    const endSelect = document.getElementById('endSurah');
+    const startVerse = document.getElementById('startVerse');
+    const endVerse = document.getElementById('endVerse');
+    
+    SURAH_DATA.forEach(surah => {
+        const option1 = document.createElement('option');
+        option1.value = surah.num;
+        option1.textContent = surah.num + '. ' + surah.name + ' (' + surah.verses + ' آية)';
+        startSelect.appendChild(option1);
+        
+        const option2 = document.createElement('option');
+        option2.value = surah.num;
+        option2.textContent = surah.num + '. ' + surah.name + ' (' + surah.verses + ' آية)';
+        endSelect.appendChild(option2);
+    });
+    
+    startSelect.value = '1';
+    endSelect.value = '114';
+    startVerse.value = '1';
+    endVerse.value = '6';
+    
+    startSelect.addEventListener('change', function() {
+        const surahNum = parseInt(this.value);
+        const maxVerses = SURAH_DATA[surahNum - 1].verses;
+        
+        startVerse.value = '1';
+        startVerse.max = maxVerses;
+        startVerse.placeholder = '1 - ' + maxVerses;
+    });
+    
+    endSelect.addEventListener('change', function() {
+        const surahNum = parseInt(this.value);
+        const maxVerses = SURAH_DATA[surahNum - 1].verses;
+        
+        endVerse.value = maxVerses;
+        endVerse.max = maxVerses;
+        endVerse.placeholder = '1 - ' + maxVerses;
+    });
+    
+    startVerse.addEventListener('blur', function() {
+        const surahNum = parseInt(startSelect.value);
+        validateVerseInput(this, surahNum);
+    });
+    
+    endVerse.addEventListener('blur', function() {
+        const surahNum = parseInt(endSelect.value);
+        validateVerseInput(this, surahNum);
+    });
+}
+
+function populateExcludedDays() {
+    const container = document.getElementById('excludedDaysGroup');
+    WEEKDAYS.forEach((day, index) => {
+        const label = document.createElement('label');
+        label.className = 'checkbox-label';
+        
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.value = index;
+        checkbox.id = 'day' + index;
+        
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(day));
+        container.appendChild(label);
+    });
+}
+
+function setDefaultStartDate() {
+    const today = new Date();
+    const dateStr = today.toISOString().split('T')[0];
+    document.getElementById('startDate').value = dateStr;
+}
+
+function showMenuView() {
+    hideAllViews();
+    document.getElementById('menuView').classList.remove('hidden');
+}
+
+function showCreateProgramView() {
+    hideAllViews();
+    document.getElementById('createProgramView').classList.remove('hidden');
+}
+
+function showProgramsList() {
+    hideAllViews();
+    document.getElementById('programsListView').classList.remove('hidden');
+    renderProgramsList();
+}
+
+function showMainView() {
+    hideAllViews();
+    document.getElementById('mainView').classList.remove('hidden');
+    updateMainView();
+}
+
+function hideAllViews() {
+    document.getElementById('authView').classList.add('hidden');
+    document.getElementById('menuView').classList.add('hidden');
+    document.getElementById('createProgramView').classList.add('hidden');
+    document.getElementById('programsListView').classList.add('hidden');
+    document.getElementById('mainView').classList.add('hidden');
+}
+
+function createProgram() {
+    const name = document.getElementById('programName').value.trim();
+    const type = document.getElementById('programType').value;
+    const startSurah = parseInt(document.getElementById('startSurah').value);
+    const startVerse = parseInt(document.getElementById('startVerse').value);
+    const endSurah = parseInt(document.getElementById('endSurah').value);
+    const endVerse = parseInt(document.getElementById('endVerse').value);
+    const numberOfDays = parseInt(document.getElementById('numberOfDays').value);
+    const startDate = document.getElementById('startDate').value;
+    const reminderTime = document.getElementById('reminderTime').value;
+    
+    if (!name) {
+        alert('⚠️ الرجاء إدخال اسم البرنامج');
+        return;
+    }
+    
+    if (!startVerse || !endVerse) {
+        alert('⚠️ الرجاء إدخال أرقام الآيات');
+        return;
+    }
+    
+    if (startVerse < 1 || startVerse > SURAH_DATA[startSurah - 1].verses) {
+        alert('⚠️ رقم الآية يجب أن يكون بين 1 و ' + SURAH_DATA[startSurah - 1].verses + ' لسورة ' + SURAH_DATA[startSurah - 1].name);
+        return;
+    }
+    
+    if (endVerse < 1 || endVerse > SURAH_DATA[endSurah - 1].verses) {
+        alert('⚠️ رقم الآية يجب أن يكون بين 1 و ' + SURAH_DATA[endSurah - 1].verses + ' لسورة ' + SURAH_DATA[endSurah - 1].name);
+        return;
+    }
+    
+    if (numberOfDays < 1) {
+        alert('⚠️ عدد الأيام يجب أن يكون أكبر من 0');
+        return;
+    }
+    
+    const excludedDays = [];
+    for (let i = 0; i < 7; i++) {
+        if (document.getElementById('day' + i).checked) {
+            excludedDays.push(i);
+        }
+    }
+    
+    const totalVerses = calculateTotalVerses(startSurah, startVerse, endSurah, endVerse);
+    
+    if (totalVerses <= 0) {
+        alert('⚠️ نطاق الآيات غير صحيح');
+        return;
+    }
+    
+    const versesPerDay = Math.ceil(totalVerses / numberOfDays);
+    const endDate = calculateEndDate(new Date(startDate), numberOfDays, excludedDays);
+    
+    const program = {
+        id: 'prog_' + Date.now(),
+        name: name,
+        type: type,
+        startSurah: startSurah,
+        startVerse: startVerse,
+        endSurah: endSurah,
+        endVerse: endVerse,
+        totalVerses: totalVerses,
+        versesPerDay: versesPerDay,
+        totalDays: numberOfDays,
+        startDate: startDate,
+        endDate: endDate.toISOString().split('T')[0],
+        excludedDays: excludedDays,
+        reminderTime: reminderTime,
+        completedDays: [],
+        missedDays: [],
+        currentVerse: { surah: startSurah, verse: startVerse },
+        streak: 0,
+        lastCompletedDate: null,
+        completionHistory: {},
+        taskHistory: [],
+        partialProgress: null,
+        lastHistoryView: 'scheduled'
+    };
+    
+    allPrograms.push(program);
+    currentProgramId = program.id;
+    saveToStorage();
+    
+    alert('✅ تم إنشاء البرنامج بنجاح!');
+    showMainView();
+}
+
+function calculateTotalVerses(startS, startV, endS, endV) {
+    if (startS < 1 || startS > 114 || endS < 1 || endS > 114) return 0;
+    if (startS > endS) return 0;
+    
+    let total = 0;
+    
+    if (startS === endS) {
+        if (endV < startV) return 0;
+        return endV - startV + 1;
+    }
+    
+    const firstSurahVerses = SURAH_DATA[startS - 1].verses;
+    total += firstSurahVerses - startV + 1;
+    
+    for (let i = startS + 1; i < endS; i++) {
+        total += SURAH_DATA[i - 1].verses;
+    }
+    
+    total += endV;
+    return total;
+}
+
+function calculateEndDate(startDate, daysNeeded, excludedDays) {
+    const date = new Date(startDate);
+    let count = 0;
+    
+    while (count < daysNeeded) {
+        if (!excludedDays.includes(date.getDay())) {
+            count++;
+        }
+        if (count < daysNeeded) {
+            date.setDate(date.getDate() + 1);
+        }
+    }
+    
+    return date;
+}
+
+function isExcludedDay(date, excludedDaysSet) {
+    return excludedDaysSet.has(date.getDay());
+}
+
+function renderProgramsList() {
+    const container = document.getElementById('programsList');
+    
+    if (allPrograms.length === 0) {
+        container.innerHTML = '<p class="small-text">لا توجد برامج بعد. قم بإنشاء برنامج جديد!</p>';
+        return;
+    }
+    
+    container.innerHTML = '';
+    allPrograms.forEach(program => {
+        const div = document.createElement('div');
+        div.className = 'program-list-item';
+        div.onclick = () => {
+            currentProgramId = program.id;
+            saveToStorage();
+            showMainView();
+        };
+        
+        const totalTasks = program.totalDays || Math.ceil(program.totalVerses / program.versesPerDay);
+        const progress = (program.completedDays.length / totalTasks * 100).toFixed(1);
+        
+        div.innerHTML = '<div class="program-title">' + PROGRAM_TYPES[program.type] + ' ' + program.name + '</div>' +
+            '<div class="program-meta">📊 التقدم: ' + progress + '% | ' + 
+            '📅 من ' + SURAH_DATA[program.startSurah - 1].name + ':' + program.startVerse +
+            ' إلى ' + SURAH_DATA[program.endSurah - 1].name + ':' + program.endVerse + '</div>';
+        
+        container.appendChild(div);
+    });
+}
+
+function getCurrentProgram() {
+    return allPrograms.find(p => p.id === currentProgramId);
+}
+
+function calculateCompletedVerses(program) {
+    let total = 0;
+    program.taskHistory.forEach(task => {
+        if (task.completed) {
+            total += calculateTotalVerses(task.startSurah, task.startVerse, task.endSurah, task.endVerse);
+        }
+    });
+    return total;
+}
+
+function updateMainView() {
+    const program = getCurrentProgram();
+    if (!program) {
+        showMenuView();
+        return;
+    }
+    
+    document.getElementById('programTitle').textContent = PROGRAM_TYPES[program.type] + ' ' + program.name;
+    
+    const completedVerses = calculateCompletedVerses(program);
+    const remainingVerses = program.totalVerses - completedVerses;
+    
+    document.getElementById('totalVersesDisplay').textContent = program.totalVerses;
+    document.getElementById('completedVersesDisplay').textContent = completedVerses;
+    document.getElementById('remainingVersesDisplay').textContent = remainingVerses;
+    document.getElementById('streakDisplay').textContent = program.streak;
+    
+    const progress = ((completedVerses / program.totalVerses) * 100).toFixed(1);
+    const progressFill = document.getElementById('progressFill');
+    progressFill.style.width = progress + '%';
+    progressFill.textContent = progress + '%';
+    
+    renderTodayTask(program);
+    renderDelayAlerts(program);
+    renderPartialProgressAlert(program);
+    
+    if (program.lastHistoryView === 'completed') {
+        showCompletedHistory();
+    } else if (program.lastHistoryView === 'pending') {
+        showPendingHistory();
+    } else {
+        showAllScheduledTasks();
+    }
+}
+
+function setActiveTab(index) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach((tab, i) => {
+        if (i === index) {
+            tab.classList.add('active');
+        } else {
+            tab.classList.remove('active');
+        }
+    });
+}
+
+function renderTodayTask(program) {
+    const container = document.getElementById('todayTaskCard');
+    const today = new Date();
+    const todayStr = today.toISOString().split('T')[0];
+    
+    if (program.excludedDays.includes(today.getDay())) {
+        container.innerHTML = '<div class="alert alert-info">📅 اليوم مستثنى من البرنامج</div>';
+        return;
+    }
+    
+    if (program.completedDays.includes(todayStr)) {
+        container.innerHTML = '<div class="alert alert-info">✅ تم إنجاز مهمة اليوم بنجاح!</div>';
+        return;
+    }
+    
+    const task = getTodayTask(program);
+    
+    if (!task) {
+        container.innerHTML = '<div class="alert alert-info">🎉 مبروك! لقد أتممت البرنامج بالكامل!</div>';
+        return;
+    }
+    
+    const versesCount = calculateTotalVerses(task.startSurah, task.startVerse, task.endSurah, task.endVerse);
+    
+    container.innerHTML = '<div class="task-card">' +
+        '<div class="task-header">' +
+        '<div class="task-info"><span class="task-number">' + task.taskNumber + '</span> مهمة اليوم</div>' +
+        '<span class="status-badge status-info">📅 ' + formatDate(today) + '</span></div>' +
+        '<div class="task-range">' +
+        '<strong>من:</strong> سورة ' + task.startSurahName + ' - الآية ' + task.startVerse + '<br>' +
+        '<strong>إلى:</strong> سورة ' + task.endSurahName + ' - الآية ' + task.endVerse + '<br>' +
+        '<strong>عدد الآيات:</strong> ' + versesCount + ' آية</div>' +
+        '<div class="btn-group">' +
+        '<button class="btn btn-primary" onclick="markTaskComplete()">✅ إتمام المهمة</button>' +
+        '<button class="btn btn-secondary" onclick="showPartialProgressForm()">💾 حفظ تقدم جزئي</button></div>' +
+        '<div id="partialProgressForm" class="hidden partial-progress">' +
+        '<h4 style="margin-bottom: var(--space-12);">حفظ التقدم الجزئي</h4>' +
+        '<div class="form-group"><label>توقفت عند سورة:آية</label>' +
+        '<div class="verse-input-group">' +
+        '<select id="partialSurah">' + SURAH_DATA.map(s => '<option value="' + s.num + '">' + s.name + '</option>').join('') + '</select>' +
+        '<input type="number" id="partialVerse" min="1" placeholder="الآية"></div></div>' +
+        '<button class="btn btn-primary btn-small" onclick="savePartialProgress()">💾 حفظ</button>' +
+        '<button class="btn btn-secondary btn-small" onclick="hidePartialProgressForm()">❌ إلغاء</button></div></div>';
+}
+
+function getTodayTask(program) {
+    const tasks = generateAllScheduledTasks();
+    const todayStr = new Date().toISOString().split('T')[0];
+    return tasks.find(t => t.date === todayStr && !t.isCompleted);
+}
+
+function renderDelayAlerts(program) {
+    const container = document.getElementById('delayAlert');
+    const today = new Date();
+    const todayStr = today.toISOString().split('T')[0];
+    
+    const tasks = generateAllScheduledTasks();
+    const missedTasks = tasks.filter(t => t.isPast && !t.isCompleted && t.date !== todayStr);
+    
+    if (missedTasks.length > 0) {
+        container.innerHTML = '<div class="alert alert-warning">⚠️ لديك ' + missedTasks.length + ' مهمة متأخرة لم تكتمل</div>';
+    } else {
+        container.innerHTML = '';
+    }
+}
+
+function renderPartialProgressAlert(program) {
+    const container = document.getElementById('partialProgressAlert');
+    
+    if (program.partialProgress) {
+        const pp = program.partialProgress;
+        const percentage = ((pp.versesCompleted / pp.totalVersesNeeded) * 100).toFixed(1);
+        
+        container.innerHTML = '<div class="partial-progress">' +
+            '<h4>📌 تقدم جزئي محفوظ</h4>' +
+            '<p>توقفت عند: سورة ' + SURAH_DATA[pp.stoppedAtSurah - 1].name + ' - الآية ' + pp.stoppedAtVerse + '</p>' +
+            '<p>أنجزت: ' + pp.versesCompleted + ' من ' + pp.totalVersesNeeded + ' آية (' + percentage + '%)</p>' +
+            '<button class="btn btn-secondary btn-small" onclick="continueFromPartialProgress()">▶️ متابعة من هنا</button>' +
+            '<button class="btn btn-danger btn-small" onclick="clearPartialProgress()">🗑️ مسح</button></div>';
+    } else {
+        container.innerHTML = '';
+    }
+}
+
+function markTaskComplete() {
+    const program = getCurrentProgram();
+    if (!program) return;
+    
+    const task = getTodayTask(program);
+    if (!task) return;
+    
+    const todayStr = new Date().toISOString().split('T')[0];
+    
+    if (!program.completedDays.includes(todayStr)) {
+        program.completedDays.push(todayStr);
+    }
+    
+    program.taskHistory.push({
+        date: todayStr,
+        startSurah: task.startSurah,
+        startVerse: task.startVerse,
+        endSurah: task.endSurah,
+        endVerse: task.endVerse,
+        completed: true,
+        completedAt: new Date().toISOString()
+    });
+    
+    program.currentVerse = {
+        surah: task.endSurah,
+        verse: task.endVerse + 1
+    };
+    
+    if (program.currentVerse.verse > SURAH_DATA[program.currentVerse.surah - 1].verses) {
+        program.currentVerse.surah++;
+        program.currentVerse.verse = 1;
+    }
+    
+    updateStreak(program, todayStr);
+    program.partialProgress = null;
+    
+    saveToStorage();
+    alert('🎉 ممتاز! تم إتمام مهمة اليوم');
+    updateMainView();
+}
+
+function updateStreak(program, dateStr) {
+    const date = new Date(dateStr);
+    const yesterday = new Date(date);
+    yesterday.setDate(yesterday.getDate() - 1);
+    const yesterdayStr = yesterday.toISOString().split('T')[0];
+    
+    if (program.completedDays.includes(yesterdayStr) || !program.lastCompletedDate) {
+        program.streak++;
+    } else {
+        program.streak = 1;
+    }
+    
+    program.lastCompletedDate = dateStr;
+}
+
+function getHijriDate(gregorianDate) {
+    const greg = new Date(gregorianDate);
+    
+    let day = greg.getDate();
+    let month = greg.getMonth() + 1;
+    let year = greg.getFullYear();
+    
+    let a, b;
+    if (month < 3) {
+        year -= 1;
+        month += 12;
+    }
+    
+    a = Math.floor(year / 100);
+    b = 2 - a + Math.floor(a / 4);
+    
+    const jd = Math.floor(365.25 * (year + 4716)) + Math.floor(30.6001 * (month + 1)) + day + b - 1524.5;
+    
+    const l = jd - 1948440 + 10632;
+    const n = Math.floor((l - 1) / 10631);
+    const l2 = l - 10631 * n + 354;
+    const j = (Math.floor((10985 - l2) / 5316)) * (Math.floor(50 * l2 / 17719)) + (Math.floor(l2 / 5670)) * (Math.floor(43 * l2 / 15238));
+    const l3 = l2 - (Math.floor((30 - j) / 15)) * (Math.floor((17719 * j) / 50)) - (Math.floor(j / 16)) * (Math.floor((15238 * j) / 43)) + 29;
+    
+    const hijriMonth = Math.floor((24 * l3) / 709);
+    const hijriDay = Math.ceil(l3 - Math.floor((709 * hijriMonth) / 24));
+    const hijriYear = Math.ceil(30 * n + j - 30);
+    
+    return {
+        day: hijriDay,
+        month: HIJRI_MONTHS[hijriMonth - 1],
+        year: hijriYear
+    };
+}
+
+function showPartialProgressForm() {
+    document.getElementById('partialProgressForm').classList.remove('hidden');
+}
+
+function hidePartialProgressForm() {
+    document.getElementById('partialProgressForm').classList.add('hidden');
+}
+
+function savePartialProgress() {
+    const program = getCurrentProgram();
+    if (!program) return;
+    
+    const task = getTodayTask(program);
+    if (!task) return;
+    
+    const surah = parseInt(document.getElementById('partialSurah').value);
+    const verse = parseInt(document.getElementById('partialVerse').value);
+    
+    if (!verse || verse < 1) {
+        alert('⚠️ الرجاء إدخال رقم آية صحيح');
+        return;
+    }
+    
+    if (verse > SURAH_DATA[surah - 1].verses) {
+        alert('⚠️ رقم الآية يجب أن يكون بين 1 و ' + SURAH_DATA[surah - 1].verses);
+        return;
+    }
+    
+    const versesCompleted = calculateTotalVerses(task.startSurah, task.startVerse, surah, verse);
+    const totalVersesNeeded = calculateTotalVerses(task.startSurah, task.startVerse, task.endSurah, task.endVerse);
+    
+    if (versesCompleted <= 0 || versesCompleted > totalVersesNeeded) {
+        alert('⚠️ الموضع المختار غير صحيح');
+        return;
+    }
+    
+    program.partialProgress = {
+        date: new Date().toISOString().split('T')[0],
+        stoppedAtSurah: surah,
+        stoppedAtVerse: verse,
+        versesCompleted: versesCompleted,
+        totalVersesNeeded: totalVersesNeeded
+    };
+    
+    saveToStorage();
+    alert('✅ تم حفظ التقدم الجزئي');
+    updateMainView();
+}
+
+function continueFromPartialProgress() {
+    const program = getCurrentProgram();
+    if (!program || !program.partialProgress) return;
+    
+    const pp = program.partialProgress;
+    alert('📖 تابع من سورة ' + SURAH_DATA[pp.stoppedAtSurah - 1].name + ' - الآية ' + (pp.stoppedAtVerse + 1));
+}
+
+function clearPartialProgress() {
+    const program = getCurrentProgram();
+    if (!program) return;
+    
+    if (confirm('⚠️ هل تريد مسح التقدم الجزئي المحفوظ؟')) {
+        program.partialProgress = null;
+        saveToStorage();
+        updateMainView();
+    }
+}
+
+function completeTaskByDate(dateStr, startSurah, startVerse, endSurah, endVerse) {
+    const program = getCurrentProgram();
+    if (!program) return;
+    
+    if (!program.completedDays.includes(dateStr)) {
+        program.completedDays.push(dateStr);
+    }
+    
+    program.taskHistory.push({
+        date: dateStr,
+        startSurah: startSurah,
+        startVerse: startVerse,
+        endSurah: endSurah,
+        endVerse: endVerse,
+        completed: true,
+        completedAt: new Date().toISOString()
+    });
+    
+    const taskDate = new Date(dateStr);
+    const today = new Date();
+    if (taskDate <= today) {
+        program.currentVerse = {
+            surah: endSurah,
+            verse: endVerse + 1
+        };
+        
+        if (program.currentVerse.verse > SURAH_DATA[program.currentVerse.surah - 1].verses) {
+            program.currentVerse.surah++;
+            program.currentVerse.verse = 1;
+        }
+    }
+    
+    saveToStorage();
+    alert('✅ تم إنجاز المهمة بنجاح!');
+    updateMainView();
+}
+
+function showAllScheduledTasks() {
+    const program = getCurrentProgram();
+    if (!program) return;
+    
+    program.lastHistoryView = 'scheduled';
+    saveToStorage();
+    setActiveTab(0);
+    
+    const historyDiv = document.getElementById('historyContent');
+    const tasks = generateAllScheduledTasks();
+    
+    if (tasks.length === 0) {
+        historyDiv.innerHTML = '<p class="small-text">لا توجد مهام مجدولة</p>';
+        return;
+    }
+    
+    historyDiv.innerHTML = tasks.map(task => {
+        let statusClass = 'future';
+        let statusBadge = '📅 مستقبلي';
+        let statusBadgeClass = 'status-info';
+        
+        if (task.isCompleted) {
+            statusClass = 'completed';
+            statusBadge = '✅ منجز';
+            statusBadgeClass = 'status-success';
+        } else if (task.isPast) {
+            statusClass = 'delayed';
+            statusBadge = '⏰ متأخر';
+            statusBadgeClass = 'status-error';
+        } else if (task.isToday) {
+            statusClass = '';
+            statusBadge = '📍 اليوم';
+            statusBadgeClass = 'status-warning';
+        }
+        
+        const versesCount = calculateTotalVerses(task.startSurah, task.startVerse, task.endSurah, task.endVerse);
+        
+        let actionButton = '';
+        if (!task.isCompleted && (task.isToday || task.isPast)) {
+            actionButton = '<div class="task-actions"><button class="btn btn-primary btn-small" onclick="completeTaskByDate(\'' + 
+                task.date + '\', ' + task.startSurah + ', ' + task.startVerse + ', ' + task.endSurah + ', ' + task.endVerse + 
+                ')">✅ أنجز الآن</button></div>';
+        }
+        
+        return '<div class="task-card ' + statusClass + '">' +
+            '<div class="task-header"><div class="task-info">' +
+            '<span class="task-number">' + task.taskNumber + '</span>' +
+            formatDate(new Date(task.date)) + '</div>' +
+            '<span class="status-badge ' + statusBadgeClass + '">' + statusBadge + '</span></div>' +
+            '<div class="task-range"><strong>من:</strong> سورة ' + task.startSurahName + ' - الآية ' + task.startVerse + '<br>' +
+            '<strong>إلى:</strong> سورة ' + task.endSurahName + ' - الآية ' + task.endVerse + '<br>' +
+            '<strong>عدد الآيات:</strong> ' + versesCount + ' آية</div>' +
+            actionButton + '</div>';
+    }).join('');
+}
+
+function showCompletedHistory() {
+    const program = getCurrentProgram();
+    if (!program) return;
+    
+    program.lastHistoryView = 'completed';
+    saveToStorage();
+    setActiveTab(1);
+    
+    const historyDiv = document.getElementById('historyContent');
+    const completedTasks = program.taskHistory.filter(t => t.completed);
+    
+    if (completedTasks.length === 0) {
+        historyDiv.innerHTML = '<p class="small-text">لا توجد مهام منجزة بعد</p>';
+        return;
+    }
+    
+    historyDiv.innerHTML = completedTasks.reverse().map(task => {
+        const versesCount = calculateTotalVerses(task.startSurah, task.startVerse, task.endSurah, task.endVerse);
+        
+        return '<div class="task-card completed">' +
+            '<div class="task-header"><div class="task-info">' +
+            formatDate(new Date(task.date)) + '</div>' +
+            '<span class="status-badge status-success">✅ منجز</span></div>' +
+            '<div class="task-range"><strong>من:</strong> سورة ' + SURAH_DATA[task.startSurah - 1].name + ' - الآية ' + task.startVerse + '<br>' +
+            '<strong>إلى:</strong> سورة ' + SURAH_DATA[task.endSurah - 1].name + ' - الآية ' + task.endVerse + '<br>' +
+            '<strong>عدد الآيات:</strong> ' + versesCount + ' آية</div>' +
+            '<div class="task-actions">' +
+            '<button class="btn btn-secondary btn-small" onclick="editCompletedTask(\'' + task.date + '\')">✏️ تعديل</button>' +
+            '</div></div>';
+    }).join('');
+}
+
+function showPendingHistory() {
+    const program = getCurrentProgram();
+    if (!program) return;
+    
+    program.lastHistoryView = 'pending';
+    saveToStorage();
+    setActiveTab(2);
+    
+    const historyDiv = document.getElementById('historyContent');
+    const tasks = generateAllScheduledTasks();
+    const pendingTasks = tasks.filter(t => t.isPast && !t.isCompleted);
+    
+    if (pendingTasks.length === 0) {
+        historyDiv.innerHTML = '<p class="small-text">لا توجد مهام معلقة! ممتاز! 🎉</p>';
+        return;
+    }
+    
+    historyDiv.innerHTML = pendingTasks.map(task => {
+        const versesCount = calculateTotalVerses(task.startSurah, task.startVerse, task.endSurah, task.endVerse);
+        
+        return '<div class="task-card delayed">' +
+            '<div class="task-header"><div class="task-info">' +
+            '<span class="task-number">' + task.taskNumber + '</span>' +
+            formatDate(new Date(task.date)) + '</div>' +
+            '<span class="status-badge status-error">⏰ متأخر</span></div>' +
+            '<div class="task-range"><strong>من:</strong> سورة ' + task.startSurahName + ' - الآية ' + task.startVerse + '<br>' +
+            '<strong>إلى:</strong> سورة ' + task.endSurahName + ' - الآية ' + task.endVerse + '<br>' +
+            '<strong>عدد الآيات:</strong> ' + versesCount + ' آية</div></div>';
+    }).join('');
+}
+
+function generateAllScheduledTasks() {
+    const program = getCurrentProgram();
+    if (!program) return [];
+    
+    const tasks = [];
+    const excludedDaysSet = new Set(program.excludedDays);
+    const completedDaysSet = new Set(program.completedDays);
+    
+    let currentDate = new Date(program.startDate);
+    let currentSurah = program.startSurah;
+    let currentVerse = program.startVerse;
+    
+    let taskNumber = 1;
+    const todayStr = new Date().toISOString().split('T')[0];
+    const today = new Date(todayStr);
+    const maxTasks = program.totalDays || 1000;
+    
+    while (taskNumber <= maxTasks && (currentSurah < program.endSurah || (currentSurah === program.endSurah && currentVerse <= program.endVerse))) {
+        const dateStr = currentDate.toISOString().split('T')[0];
+        
+        if (!isExcludedDay(currentDate, excludedDaysSet)) {
+            const task = {
+                taskNumber: taskNumber,
+                date: dateStr,
+                startSurah: currentSurah,
+                startSurahName: SURAH_DATA[currentSurah - 1].name,
+                startVerse: currentVerse
+            };
+            
+            let versesNeeded = program.versesPerDay;
+            let endSurah = currentSurah;
+            let endVerse = currentVerse;
+            
+            while (versesNeeded > 0) {
+                const versesInCurrentSurah = SURAH_DATA[endSurah - 1].verses;
+                const versesLeftInSurah = versesInCurrentSurah - endVerse;
+                
+                if (versesLeftInSurah >= versesNeeded) {
+                    endVerse += versesNeeded;
+                    versesNeeded = 0;
+                } else {
+                    versesNeeded -= (versesLeftInSurah + 1);
+                    endSurah++;
+                    endVerse = 1;
+                    
+                    if (endSurah > program.endSurah) {
+                        endSurah = program.endSurah;
+                        endVerse = program.endVerse;
+                        versesNeeded = 0;
+                    }
+                }
+            }
+            
+            if (endSurah > program.endSurah || (endSurah === program.endSurah && endVerse > program.endVerse)) {
+                endSurah = program.endSurah;
+                endVerse = program.endVerse;
+            }
+            
+            task.endSurah = endSurah;
+            task.endSurahName = SURAH_DATA[endSurah - 1].name;
+            task.endVerse = endVerse;
+            task.isCompleted = completedDaysSet.has(dateStr);
+            task.isToday = dateStr === todayStr;
+            task.isPast = currentDate < today && !task.isToday;
+            task.isFuture = !task.isToday && !task.isPast;
+            
+            tasks.push(task);
+            taskNumber++;
+            
+            currentSurah = endSurah;
+            currentVerse = endVerse + 1;
+            
+            if (currentVerse > SURAH_DATA[currentSurah - 1].verses) {
+                currentSurah++;
+                currentVerse = 1;
+            }
+            
+            if (currentSurah > program.endSurah || (currentSurah === program.endSurah && currentVerse > program.endVerse)) {
+                break;
+            }
+        }
+        
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+    
+    return tasks;
+}
+
+function editCompletedTask(dateStr) {
+    const program = getCurrentProgram();
+    if (!program) {
+        alert('❌ خطأ: لم يتم العثور على البرنامج');
+        return;
+    }
+    
+    if (confirm('⚠️ هل تريد حذف المهمة المنجزة في ' + formatDate(new Date(dateStr)) + '؟')) {
+        const index = program.completedDays.indexOf(dateStr);
+        if (index > -1) {
+            program.completedDays.splice(index, 1);
+        }
+        
+        program.taskHistory = program.taskHistory.filter(t => t.date !== dateStr);
+        
+        if (program.completionHistory[dateStr]) {
+            delete program.completionHistory[dateStr];
+        }
+        
+        recalculateCurrentPosition(program);
+        
+        saveToStorage();
+        alert('✅ تم حذف المهمة المنجزة');
+        updateMainView();
+    }
+}
+
+function recalculateCurrentPosition(program) {
+    if (program.taskHistory.length === 0) {
+        program.currentVerse = {
+            surah: program.startSurah,
+            verse: program.startVerse
+        };
+        program.streak = 0;
+        program.lastCompletedDate = null;
+        return;
+    }
+    
+    const sortedHistory = program.taskHistory
+        .filter(t => t.completed)
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    if (sortedHistory.length > 0) {
+        const lastTask = sortedHistory[sortedHistory.length - 1];
+        program.currentVerse = {
+            surah: lastTask.endSurah,
+            verse: lastTask.endVerse + 1
+        };
+        
+        if (program.currentVerse.verse > SURAH_DATA[program.currentVerse.surah - 1].verses) {
+            program.currentVerse.surah++;
+            program.currentVerse.verse = 1;
+        }
+        
+        program.lastCompletedDate = lastTask.date;
+    }
+}
+
+function deleteCurrentProgram() {
+    const program = getCurrentProgram();
+    if (!program) {
+        alert('❌ خطأ: لم يتم العثور على البرنامج');
+        return;
+    }
+    
+    if (confirm('⚠️ هل أنت متأكد من حذف هذا البرنامج؟ سيتم فقدان جميع البيانات.')) {
+        allPrograms = allPrograms.filter(p => p.id !== currentProgramId);
+        currentProgramId = null;
+        saveToStorage();
+        alert('✅ تم حذف البرنامج');
+        showMenuView();
+    }
+}
+
+function formatDate(date) {
+    const day = date.getDate();
+    const gregMonth = GREGORIAN_MONTHS_ARABIC[date.getMonth()];
+    const gregYear = date.getFullYear();
+    const hijri = getHijriDate(date);
+    return hijri.day + ' ' + hijri.month + ' ' + hijri.year + ' | ' + day + ' ' + gregMonth + ' ' + gregYear;
+}
+
+init();
+    </script>
+</body>
+</html>

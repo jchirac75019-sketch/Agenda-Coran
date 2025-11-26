@@ -1,0 +1,99 @@
+{
+  "name": "Agenda Coran - برنامج القرآن الكريم",
+  "short_name": "Agenda Coran",
+  "description": "Application pour gérer votre programme de lecture et de mémorisation du Coran avec suivi quotidien et synchronisation cloud",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fffcf9",
+  "theme_color": "#208085",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/images/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/apple-touch-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-540x720.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/screenshot-1280x800.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Créer un programme",
+      "short_name": "Nouveau",
+      "description": "Créer rapidement un nouveau programme de Coran",
+      "url": "/?action=create",
+      "icons": [
+        {
+          "src": "/images/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Voir mes programmes",
+      "short_name": "Programmes",
+      "description": "Afficher la liste de mes programmes",
+      "url": "/?action=programs",
+      "icons": [
+        {
+          "src": "/images/icon-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
