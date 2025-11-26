@@ -1,8 +1,8 @@
 const CACHE_NAME = 'agenda-coran-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json'
+  '/Agenda-Coran/',
+  '/Agenda-Coran/index.html',
+  '/Agenda-Coran/manifest.json'
 ];
 
 // Installation du Service Worker

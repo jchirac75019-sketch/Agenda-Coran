@@ -2,8 +2,8 @@
   "name": "Agenda Coran - برنامج القرآن الكريم",
   "short_name": "Agenda Coran",
   "description": "Application pour gérer votre programme de lecture et de mémorisation du Coran avec suivi quotidien et synchronisation cloud",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/Agenda-Coran/",
+  "scope": "/Agenda-Coran/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#fffcf9",
@@ -12,57 +12,57 @@
   "dir": "rtl",
   "icons": [
     {
-      "src": "/images/icon-128.png",
+      "src": "/Agenda-Coran/images/icon-128.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/images/icon-192.png",
+      "src": "/Agenda-Coran/images/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/images/icon-256.png",
+      "src": "/Agenda-Coran/images/icon-256.png",
       "sizes": "256x256",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/images/icon-512.png",
+      "src": "/Agenda-Coran/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/images/icon-maskable-192.png",
+      "src": "/Agenda-Coran/images/icon-maskable-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/images/icon-maskable-512.png",
+      "src": "/Agenda-Coran/images/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/images/apple-touch-icon-180.png",
+      "src": "/Agenda-Coran/images/apple-touch-icon-180.png",
       "sizes": "180x180",
       "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "/images/screenshot-540x720.png",
-      "sizes": "540x720",
+      "src": "/Agenda-Coran/images/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "/images/screenshot-1280x800.png",
-      "sizes": "1280x800",
+      "src": "/Agenda-Coran/images/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "form_factor": "wide"
     }
@@ -73,10 +73,10 @@
       "name": "Créer un programme",
       "short_name": "Nouveau",
       "description": "Créer rapidement un nouveau programme de Coran",
-      "url": "/?action=create",
+      "url": "/Agenda-Coran/?action=create",
       "icons": [
         {
-          "src": "/images/icon-96.png",
+          "src": "/Agenda-Coran/images/icon-96.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -86,10 +86,10 @@
       "name": "Voir mes programmes",
       "short_name": "Programmes",
       "description": "Afficher la liste de mes programmes",
-      "url": "/?action=programs",
+      "url": "/Agenda-Coran/?action=programs",
       "icons": [
         {
-          "src": "/images/icon-96.png",
+          "src": "/Agenda-Coran/images/icon-96.png",
           "sizes": "96x96",
           "type": "image/png"
         }
