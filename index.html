@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Agenda Coran - برنامج القرآن الكريم">
     <meta name="theme-color" content="#208085">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Agenda Coran">
@@ -191,23 +192,9 @@ body { font-family: var(--font-family-base); background-color: var(--color-backg
 .btn-secondary:hover { background-color: var(--color-secondary-hover); }
 .btn-danger { background-color: var(--color-error); color: var(--color-white); }
 .btn-danger:hover { opacity: 0.9; }
-
-/* ===== MODIFICATIONS DEMANDÉES ===== */
-.btn-create-program { 
-    font-size: 18px; 
-    padding: 16px 24px;
-    font-weight: 600;
-}
-
-.btn-sync { 
-    background-color: var(--color-purple-500); 
-    color: var(--color-btn-primary-text); 
-}
-.btn-sync:hover { 
-    background-color: var(--color-purple-600); 
-}
-/* ===== FIN MODIFICATIONS ===== */
-
+.btn-create-program { font-size: 18px; padding: 16px 24px; font-weight: 600; }
+.btn-sync { background-color: var(--color-purple-500); color: var(--color-btn-primary-text); }
+.btn-sync:hover { background-color: var(--color-purple-600); }
 .form-group { margin-bottom: var(--space-20); }
 label { display: block; margin-bottom: var(--space-8); font-weight: var(--font-weight-medium); font-size: var(--font-size-base); }
 input, select, textarea { width: 100%; padding: var(--space-12); border: 1px solid var(--color-border); border-radius: var(--radius-base); font-size: var(--font-size-base); background-color: var(--color-surface); color: var(--color-text); font-family: var(--font-family-base); }
@@ -462,7 +449,6 @@ input:focus, select:focus, textarea:focus { outline: var(--focus-outline); borde
 
         console.log('✅ Firebase initialisé avec succès');
         
-        // ===== SETUP AUTH STATE LISTENER BEFORE INIT =====
         let authInitialized = false;
         window.firebaseOnAuthStateChanged(window.firebaseAuth, async (user) => {
             if (user) {
@@ -487,10 +473,9 @@ input:focus, select:focus, textarea:focus { outline: var(--focus-outline); borde
             showCorrectView();
         });
 
-        // ===== REGISTER SERVICE WORKER =====
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
+                navigator.serviceWorker.register('/Agenda-Coran/sw.js')
                     .then(registration => {
                         console.log('✅ Service Worker enregistré:', registration);
                     })
