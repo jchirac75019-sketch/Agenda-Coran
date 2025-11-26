@@ -49,14 +49,14 @@ self.addEventListener('fetch', event => {
         if (response) {
           return response;
         }
-         return fetch(request).then(response => {
-         if (!response || response.status !== 200 || request.method !== 'GET') {
-         return response;
-        }
-         const responseClone = response.clone();
-         caches.open(CACHE_NAME).then(cache => {
-         cache.put(request, responseClone);  // ← Maintenant seulement GET
-        });
+        return fetch(request).then(response => {
+          if (!response || response.status !== 200 || response.type === 'error') {
+            return response;
+          }
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
           return response;
         }).catch(() => {
           console.log('❌ Erreur fetch:', request.url);
@@ -72,16 +72,22 @@ self.addEventListener('fetch', event => {
     );
   } else {
     // Pour les autres requêtes (API, HTML)
+    // IMPORTANT: Seulement mettre en cache les requêtes GET, pas POST
     event.respondWith(
       fetch(request)
         .then(response => {
           if (!response || response.status !== 200) {
             return response;
           }
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(request, responseClone);
-          });
+          
+          // Vérifier que c'est une requête GET avant de mettre en cache
+          if (request.method === 'GET') {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(request, responseClone);
+            });
+          }
+          
           return response;
         })
         .catch(() => {
